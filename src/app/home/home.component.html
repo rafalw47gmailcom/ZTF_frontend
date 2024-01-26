@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <link href="home.component.css" th:href="@{/style.css}" rel="stylesheet" />
+    <title>Tour operator 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        #second_header{
+            background-image: url("/static/holiday-finally.jpg");
+            background-size: 100%;
+            background-position: center;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+<header id= "second_header" class="jumbotron text-left" style="margin-bottom:0" >
+    <div>
+    </div>
+</header>
+
+
+<br>
+
+<br>
+<div>
+    <table class="table table-striped table-hover"  >
+        <thead>
+        <tr>
+
+            <th style="color: darkred"scope="col">Tytul</th>
+            <th style="color: darkred"scope="col">Kraj</th>
+            <th style="color: darkred"scope="col">Miejsce przylotu</th>
+            <th style="color: darkred"scope="col">Data wyjazdu</th>
+            <th style="color: darkred"scope="col">Powrót przed</th>
+            <th style="color: darkred" scope="col">Cena</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor= "let item of data">
+     
+                <td>{{ item.title }}</td>
+                <td>{{ item.country }}</td>
+                <td>{{ item.city }}</td>
+
+                <td>{{ item.departureDate }}</td>
+                <td>{{ item.returnDate }}</td>
+                <td>{{ item.price }}</td>
+      
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
